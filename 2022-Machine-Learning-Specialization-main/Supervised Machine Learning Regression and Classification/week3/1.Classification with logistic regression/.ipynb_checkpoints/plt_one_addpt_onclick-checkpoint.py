@@ -167,25 +167,8 @@ class plt_one_addpt_onclick:
             artist.remove()
         self.fig.canvas.draw()
 
-    # 在 plt_one_addpt_onclick.py 文件中，找到 resize_sq 方法
     def resize_sq(self, bcid):
-        """ 尝试通过调整字体大小来间接“放大”复选框 """
-        # 获取 CheckButtons 的所有文本标签
-        labels = bcid.labels
-
-        # 遍历所有标签，增加它们的字体大小
-        # 你可以根据需要调整这个字体大小的倍数（例如，从 1.5 到 2.0 甚至更多）
-        for label_text in labels:
-            current_font_size = label_text.get_fontsize()
-            label_text.set_fontsize(current_font_size * 1.5)  # 尝试将字体大小放大1.5倍
-
-        # 你也可以尝试调整 CheckButtons 的父轴的大小，但这会影响整个子图
-        # 如果 CheckButtons 的构造函数允许设置间距，那会更好，但目前看来直接操作更可行
-
-    """
-    更改代码
-    def resize_sq(self, bcid):
-        # resizes the check box
+        """ resizes the check box """
         #future reference
         #print(f"width  : {bcid.rectangles[0].get_width()}")
         #print(f"height : {bcid.rectangles[0].get_height()}")
@@ -199,7 +182,6 @@ class plt_one_addpt_onclick:
 
         #ymax = bcid.rectangles[0].get_bbox().y1
         #ymin = bcid.rectangles[0].get_bbox().y0
-
         h = bcid.boxes[0].get_height()
         bcid.boxes[0].set_height(3*h)
 
@@ -207,4 +189,3 @@ class plt_one_addpt_onclick:
         ymin = bcid.boxes[0].get_bbox().y0
         bcid.lines[0][0].set_ydata([ymax,ymin])
         bcid.lines[0][1].set_ydata([ymin,ymax])
-    """
