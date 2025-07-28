@@ -1,6 +1,8 @@
 # UNIT TESTS
 from tensorflow.keras.activations import sigmoid
 from tensorflow.keras.layers import Dense
+import tensorflow as tf
+
 
 import numpy as np
 
@@ -24,7 +26,9 @@ def test_c1(target):
         i = i + 1
 
     print("\033[92mAll tests passed!")
-    
+
+
+
 def test_c2(target):
     
     def linear(a):
