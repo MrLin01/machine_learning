@@ -19,6 +19,7 @@ def test_my_softmax(target):
     
     print("\033[92m All tests passed.")
     
+
 def test_model(target, classes, input_size):
     target.build(input_shape=(None,input_size))
     
@@ -41,4 +42,3 @@ def test_model(target, classes, input_size):
         i = i + 1
 
     print("\033[92mAll tests passed!")
-    
